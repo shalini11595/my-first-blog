@@ -1,10 +1,20 @@
 <html>
 <head>
-    <title>Shalini's blog</title>
+    <title>Django Girls blog</title>
 </head>
-<body>    
-<p>Hi there!</p>
-<p> It works!</p>
-</body>
+<body> 
+
+    <div>
+        <h1><a href="">Django Girls blog</a><h1>
+    </div>    
+    {% for post in posts %}
+        <div>
+            <p>published: {{ post.published_date }}</p>
+            <h1><a href="">{{post.title}}</a></h1>
+            <p>{{ [ost.text|linebreaks}}</p>
+        </div>    
+    {% endfor %}       
+        
+ </body>
 </html>
 
